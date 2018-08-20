@@ -23,6 +23,9 @@ class Ideone
 		{
 		System.out.print(a[k]);	
 		}
-		
+		else
+		{
+		System.out.print(a[k-1]);	
+		}
 	}
 }
