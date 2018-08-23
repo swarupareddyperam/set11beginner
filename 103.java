@@ -9,16 +9,15 @@ class Ideone
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-	  Scanner sc=new Scanner(System.in);
-		String s[]=new String[3];
-		for(int i=0;i<s.length;i++)
-		{
-			s[i]=sc.next();
-		}
-		String s1=s[0];
-		String s2=s[1];
-		String s3=s[2];
-		System.out.print(s1.substring(0,1).toUpperCase()+""+s1.substring(1).toLowerCase()+" "+s2.substring(0,1).toUpperCase()+""
-+s2.substring(1).toLowerCase()+" "+s3.substring(0,1).toUpperCase()+""+s3.substring(1).toLowerCase());
-}
+	Scanner in = new Scanner(System.in);
+     System.out.print("Input a Sentence: ");
+	 String line = in.nextLine();
+	 String upper_case_line = ""; 
+       Scanner lineScan = new Scanner(line); 
+         while(lineScan.hasNext()) {
+             String word = lineScan.next(); 
+             upper_case_line += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " "; 
+         }
+      System.out.println(upper_case_line.trim());
+	}
 }
